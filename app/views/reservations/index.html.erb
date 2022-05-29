@@ -6,6 +6,7 @@
       <th>画像</th>
       <th>開始日</th>
       <th>終了日</th>
+      <th>人数</th>
       <th>合計金額</th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
         <td><%=image_tag reservation.room.avatar.url%></td>
         <td><%=reservation.start_day.strftime('%Y年%m月%d日')%></td>
         <td><%=reservation.end_day.strftime('%Y年%m月%d日')%></td>
+        <td><%=reservation.person_number%>人</td>
         <td><%=reservation.stay_day*reservation.room.price%></td>
       </tr>
     <%end%>
